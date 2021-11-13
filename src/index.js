@@ -3,10 +3,10 @@ import path from 'path';
 import fs from 'fs';
 
 export default new Resolver({
-  async resolve({ specifier }) {
+  async resolve({ specifier, options: { projectRoot } }) {
     const options = [
-      path.join(__dirname, 'src', `${specifier}.js`),
-      path.join(__dirname, 'src', specifier, 'index.js'),
+      path.join(projectRoot, 'src', path.parse(specifier).name + '.js'),
+      path.join(projectRoot, 'src', path.parse(specifier).name, 'index.js'),
     ];
 
     for (const filePath of options) {
