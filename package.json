@@ -4,6 +4,7 @@
   "engines": {
     "node": ">=12"
   },
+  "version": "0.0.1",
   "scripts": {
     "build": "parcel build",
     "prepublishOnly": "npm run build",
