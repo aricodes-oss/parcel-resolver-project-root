@@ -8,10 +8,15 @@ platform:
 
 steps:
   - name: npm
-    image: plugins/npm
-    settings:
-      username:
+    image: node:latest
+    environment:
+      NPM_USER:
         from_secret: NPM_USERNAME
-      password:
+      NPM_PASS:
         from_secret: NPM_PASSWORD
-      email: ari@aricodes.net
+      NPM_EMAIL: ari@aricodes.net
+    commands:
+      - npm install -g npm-login-noninteractive
+      - npm-login-noninteractive
+      - npm install
+      - npm publish
