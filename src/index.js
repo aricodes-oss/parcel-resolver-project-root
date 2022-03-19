@@ -5,7 +5,7 @@ import fs from 'fs';
 export default new Resolver({
   async resolve({ specifier, options: { projectRoot } }) {
     const options = [
-      path.join(projectRoot, 'src', path.parse(specifier).name + '.js'),
+      path.join(projectRoot, 'src', `${path.parse(specifier).name}.js`),
       path.join(projectRoot, 'src', path.parse(specifier).name, 'index.js'),
     ];
 

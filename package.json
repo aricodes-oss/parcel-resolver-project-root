@@ -12,7 +12,8 @@
     "build": "parcel build",
     "prepublishOnly": "npm run build",
     "watch": "parcel watch",
-    "lint": "eslint --ext .js,.jsx src/**/*"
+    "lint": "eslint --ext .js,.jsx src/**/*",
+    "fix": "eslint --fix --ext .js,.jsx src/**/*"
   },
   "files": [
     "dist/*"
@@ -28,6 +29,6 @@
     "pretty-quick": "^3.1.1"
   },
   "dependencies": {
-    "@parcel/plugin": "^2.0.1"
+    "@parcel/plugin": "^2.3.2"
   }
 }
