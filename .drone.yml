@@ -14,3 +14,4 @@ steps:
         from_secret: NPM_USERNAME
       password:
         from_secret: NPM_PASSWORD
+      email: ari@aricodes.net
