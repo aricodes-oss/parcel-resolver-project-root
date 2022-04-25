@@ -1,5 +1,6 @@
 {
   "name": "parcel-resolver-project-root",
+  "description": "Resolve your imports from './src' and not have to use a tilde or other alias.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aricodes-oss/parcel-resolver-project-root.git"
