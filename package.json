@@ -13,8 +13,8 @@
   },
   "version": "2.1.1",
   "scripts": {
-    "lint": "eslint --ext .js,.jsx src/**/*",
-    "fix": "eslint --fix --ext .js,.jsx src/**/*"
+    "lint": "eslint --ext .js,.jsx .",
+    "fix": "eslint --fix --ext .js,.jsx ."
   },
   "devDependencies": {
     "eslint": "^8.2.0",
