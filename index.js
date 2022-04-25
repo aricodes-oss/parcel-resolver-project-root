@@ -1,8 +1,8 @@
-import { Resolver } from '@parcel/plugin';
-import path from 'path';
-import fs from 'fs';
+const { Resolver } = require('@parcel/plugin');
+const path = require('path');
+const fs = require('fs');
 
-export default new Resolver({
+module.exports = new Resolver({
   async resolve({ specifier, options: { projectRoot } }) {
     const options = [
       path.join(projectRoot, 'src', `${path.parse(specifier).name}.js`),
