@@ -5,9 +5,9 @@ const fs = require('fs');
 module.exports = new Resolver({
   async resolve({ specifier, options: { projectRoot } }) {
     const options = [
-      path.join(projectRoot, 'src', path.parse(specifier).name),
       path.join(projectRoot, 'src', `${path.parse(specifier).name}.js`),
       path.join(projectRoot, 'src', path.parse(specifier).name, 'index.js'),
+      path.join(projectRoot, 'src', path.parse(specifier).name),
     ];
 
     for (const filePath of options) {
